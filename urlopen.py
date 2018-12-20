@@ -19,7 +19,8 @@ def main():
             path = Path(__file__)
             filepath = path.parent.resolve() / args.file
             url_list = find_urls(filepath)
-            print(url_list)
+            for page in url_list:
+                webbrowser.open(page)
 
 
 def find_urls(file):
