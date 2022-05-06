@@ -46,6 +46,7 @@ def find_urls(file):
     content = text_data.read()
 
     pattern = re.compile('https?:\/\/[-_.!~*\'a-zA-Z0-9;\/?:\@&=+\$,%#]+')
+    text_data.close()
     return pattern.findall(content)
 
 
